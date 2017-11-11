@@ -4,7 +4,7 @@ MIPS PROJECT FOR DR LI, BY RYAN DAVIS
 	.data # Data declaration section
 	out_string: .asciiz "\nEnter a String!\n"
 	.text # Assembly language instructions
-main: # Start of code section
+main: 
 	li $v0, 4 # system call code for printing string = 4
 	la $a0, out_string # load address of string
 # to be printed into $a0
