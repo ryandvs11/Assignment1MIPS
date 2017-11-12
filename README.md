@@ -1,15 +1,29 @@
 # Assignment1MIPS
 # MIPS PROJECT FOR DR LI, BY RYAN DAVIS
 .data
-    buffer: .space 8 # Reserves 8 Characters
-    str1:  .asciiz "Enter string" # prompts user to enter a string
+    message:  .asciiz "Enter string"
+    userInput: .space 8
 
 .text
 
 main:
-    la $a0, str1    # Load and print string
+
+    # Shows Message
     li $v0, 4
+    la $a0, message
     syscall
 
-    li $v0, 10      # end program
+    # Get User Input
+    li $v0, 8 
+    la $a0, userInput 
+    li $a1, 8
+    syscall
+
+    #Displays Name
+    li $v0, 4
+    la $a0, userInput
+    syscall
+    
+    # end program
+    li $v0, 10      
     syscall
