@@ -1,7 +1,7 @@
 # Assignment1MIPS
 # MIPS PROJECT FOR DR LI, BY RYAN DAVIS
 .data
-    buffer: .space 20 # Reserves 20 Characters
+    buffer: .space 8 # Reserves 8 Characters
     str1:  .asciiz "Enter string" # prompts user to enter a string
 
 .text
