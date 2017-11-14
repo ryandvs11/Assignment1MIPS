@@ -1,13 +1,13 @@
-# Assignment1MIPS
-# MIPS PROJECT FOR DR LI, BY RYAN DAVIS
 .data
     message:  .asciiz "Enter string"
     userInput: .space 8
+    loop: 
 
 .text
 
 main:
 
+    
     # Shows Message
     li $v0, 4
     la $a0, message
@@ -19,11 +19,16 @@ main:
     li $a1, 8
     syscall
 
-    #Displays Name
+    
+    beq 
+    addi $t0, $zero, 0
+    addi $t1, $zero, 9
+    slt, $s0, $t0, $t1
+    syscall
+
     li $v0, 4
     la $a0, userInput
     syscall
-    
-    # end program
-    li $v0, 10      
+
+    li $v0, 10      # end program
     syscall
